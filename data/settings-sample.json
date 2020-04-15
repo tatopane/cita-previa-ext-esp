@@ -1,0 +1,10 @@
+{
+	"mailgun": {"enabled": true, 
+				"domain":"INSERT_DOMAIN", 
+				"api_key":"INSERT_KEY",
+				"email_to": "EMAIL_TO_NOTIFY"
+			},
+	"pushbullet": {"enabled": true, 
+					"access_token":"INSERT_TOKEN"
+				}
+}
