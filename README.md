@@ -18,6 +18,7 @@ This is a simple Chrome extension built to find Amazon Prime Now delivery slots 
 - Mailgun: create a sandbox domain, whitelist your email_to address
 - Weird behaviors: sometimes the extension stops running, I'm not sure why. In this case, you need to re-enable it again.
 
-## Contacting me
+## Contact me
 Tweet me @tatopane
+
 Find me on LinkedIn https://www.linkedin.com/in/mpanelati/
