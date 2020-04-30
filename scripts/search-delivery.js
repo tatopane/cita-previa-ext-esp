@@ -40,7 +40,8 @@ function search() {
    var name = "No delivery windows available";
    var pattern = name.toLowerCase();
    var targetId = "";
- 
+   
+   // FIXME: add try catch for the case of TypeError: Cannot read property 'getElementsByTagName' of null
    var div = document.getElementById("delivery-slot");
    var spans = div.getElementsByTagName("span");
 
@@ -82,9 +83,9 @@ fetch(settings_file)
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-  	console.log("received", request.message);
+  	//console.log("received", request.message);
     if( request.message == "search_delivery" ) {
-      console.log("started");
+      console.log("started"); // Add timestamp to this log
       search();
     } else {
     	console.log("no message");
