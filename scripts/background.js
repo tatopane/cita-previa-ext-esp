@@ -33,11 +33,16 @@ function my_listener(tabId, changeInfo, tab) {
     
 }
 
-var dataObj = {};
-dataObj["toggle"] = false;
-dataObj["status"] = "off";
-dataObj["the_tab_id"] = "";
-setData(dataObj);
+chrome.storage.local.get(['toggle','status','the_tab_id'], function(result) {
+    if (!result){
+        var dataObj = {};
+		dataObj["toggle"] = false;
+		dataObj["status"] = "off";
+		dataObj["the_tab_id"] = "";
+		setData(dataObj);
+    }
+});
+
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.storage.local.get(['toggle','status','the_tab_id'], function(result) {
