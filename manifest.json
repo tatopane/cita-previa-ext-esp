@@ -1,7 +1,7 @@
 {
-  "name": "Prime Now delivery finder",
+  "name": "Cita Extranjeria",
   "version": "0.1",
-  "description": "To find delivery slots in Prime Now during quarentine",
+  "description": "To find appointments for Extranjeria Spain",
   "manifest_version": 2,
   "background": {
     "scripts": ["scripts/background.js"],
@@ -11,7 +11,8 @@
   "permissions": [
     "tabs",
     "<all_urls>",
-    "https://primenow.amazon.com/*",
+    "https://*/*",
+    "https://sede.administracionespublicas.gob.es/*",
     "activeTab",
     "storage"
   ],
@@ -20,16 +21,16 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": ["scripts/search-delivery.js"]
+      "js": ["scripts/search-appointment.js"]
     }
   ],
   "browser_action": {
     //"default_popup": "popup.html",
-    "default_icon": "images/delivery-off-38.png"
+    "default_icon": "images/extranjeria-off-38.png"
   },
   "icons": {
-    "19": "images/delivery-off-19.png",
-    "38": "images/delivery-off-38.png" 
+    "19": "images/extranjeria-off-19.png",
+    "38": "images/extranjeria-off-38.png" 
   },
   "web_accessible_resources": [
     "data/*.json"

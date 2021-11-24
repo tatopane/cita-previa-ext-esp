@@ -7,13 +7,13 @@ function setData(data){
 }
 
 function toggle_extension(status, tab_id){
-    chrome.browserAction.setIcon({ path: { "19": "images/delivery-"+status+"-19.png",
-                                           "38": "images/delivery-"+status+"-38.png" }, tabId: tab_id});
+    chrome.browserAction.setIcon({ path: { "19": "images/extranjeria-"+status+"-19.png",
+                                           "38": "images/extranjeria-"+status+"-38.png" }, tabId: tab_id});
     // Pass variable & execute script
     chrome.tabs.executeScript((tab_id,  { code: 'var extension_status = "'+status+'"' }));
     if (status == 'on') {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-          chrome.tabs.sendMessage(tab_id, {message: "search_delivery"}, function(response) {
+          chrome.tabs.sendMessage(tab_id, {message: "search_appointment"}, function(response) {
             console.log("message sent");
           });
         });
