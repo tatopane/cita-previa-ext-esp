@@ -56,7 +56,7 @@ function search() {
    if (p) {
    		var index = p.innerText.toLowerCase().indexOf(pattern);	
    		if (index != -1) {
-	         console.log("No appointments found, waiting for reload");
+	         console.log("No appointments found, waiting for reload @ " + new Date());
 	         targetId = "xxxxxx";
 	         setTimeout(() => { console.log("reloading"); document.getElementById("btnSalir").click(); }, 60000);
 	    } else {
